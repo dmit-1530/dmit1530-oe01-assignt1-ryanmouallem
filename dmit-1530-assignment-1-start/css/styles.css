@@ -2,16 +2,405 @@
     --blue-grey-50: #ECEFF1;
     --blue-grey-100: #CFD8DC;
     --blue-grey-200: #B0BEC5;
+    --blue-grey-800: #78909C;
     --blue-grey-900: #263238;
 }
 
 body {
     color: #000;
     text-align: center; 
+    max-width: 100%;
 }
 
 header, footer {
-    background-color: var(--blue-grey-50);
-    color: #fff;
+    background-color: black;
+    color: #fff; 
     padding: 2rem 4rem;   
+}
+
+header {
+    padding: 2rem 4rem;
+}
+
+header img, footer img {
+    max-height: 5rem;
+    margin: 0 auto;
+}
+nav {
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+li {
+    list-style-position: outside;
+    list-style-type: disc;
+    padding: 1rem 0 0 0;
+}
+.button {
+    all: unset;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+img {
+    border-radius: 8px;
+}
+span {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 3.375rem;
+}
+.flex-container {
+    display: flex;
+}
+
+.inner-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 4rem 2rem;
+}
+
+.gray-background {
+    background-color: var(--blue-grey-50);
+}
+
+.med-grey-bg {
+    background-color: var(--blue-grey-100);
+}
+
+.dark-grey-bg {
+    background-color: var(--blue-grey-900);
+}
+
+.blue-background {
+    background-color: var(--blue-grey-800);
+}
+
+/* fonts and font styles */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h2,
+blockquote > p, .subscribe p:first-child {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 3.375rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.875rem;
+}
+
+footer p, footer figcaption {
+    color: var(--blue-grey-200);
+    font-size: 0.75rem;
+}
+
+/* Home */
+.home-section {
+    text-align: center;
+}
+
+.about-section p {
+    margin-top: 1rem;
+}
+
+.about-section img {
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.about-section .button {
+    margin: 2.25rem 0 0 0;
+}
+
+.features-intro-section p {
+    margin-top: 2rem;
+}
+
+.features-content {
+    margin-top: 4rem;
+}
+
+.features-content div {
+    margin: 1.5rem 0;
+}
+
+.quote {
+    color: white;
+}
+
+.authors {
+    margin-top: 3rem;
+}
+
+.authors p:last-child {
+    margin-top: 1rem;
+}
+
+.architecture-section p {
+    margin-top: 1.5rem;
+}
+
+.architecture-section img {
+    margin-top: 3rem;
+}
+
+.residential-section, .commercial-section {
+    margin-top: 3rem;
+    text-align: left;
+}
+
+.subscribe {
+    background-color: white;
+    border-radius: 8px;
+    padding: 4rem 1rem;
+}
+
+.subscribe p {
+    margin-top: 1rem;
+}
+
+.subscribe .button {
+    margin-top: 2rem;
+}
+
+.footer-links-container {
+    justify-content: center;
+    gap: 4.5rem;
+    margin: 3rem 0 4rem 0;
+}
+
+.links {
+    flex-direction: column;
+    font-size: 0.75rem;
+}
+
+.links a {
+    margin-top: 0.75rem;
+}
+
+footer figure {
+    padding: 0 5rem;
+}
+
+footer figcaption {
+    margin: 1.5rem auto;
+    max-width: 16rem;
+}
+
+footer p {
+    text-align: center;
+}
+
+
+/*  Gallery Page */
+.gallery-about h2 {
+    text-align: center;
+}
+
+.gallery-about div:first-of-type img {
+    margin: 3rem auto 3.75rem auto;
+}
+
+.gallery-about div {
+    margin-top: 3rem;
+}
+
+.gallery-about p {
+    margin-top: 1.8rem;
+}
+
+.gallery-about figure {
+    margin: 3rem 0 2.5rem 0;
+}
+
+.gallery-about figure img {
+    margin: 0 auto;
+}
+
+.gallery-about figcaption {
+    margin-top: 1rem;
+}
+
+.gallery-quote {
+    text-align: center;
+}
+
+.cultural-section {
+    color: white;
+}
+
+.cultural-section p {
+    margin-top: 1rem;
+}
+
+.highlights {
+    color: white;
+}
+
+.highlights div.medium-flex > img {
+    margin: 3rem auto 3rem auto;
+}
+
+.highlights figure {
+    margin-top: 3rem;
+}
+
+.highlights figcaption {
+    margin-top: 1rem;
+}
+
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+    .medium-flex {
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+
+    header div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    footer div.medium-flex {
+        justify-content: space-between;
+    }
+
+    nav {
+        margin: 0;
+    }
+
+    .features-content {
+        flex-flow: row wrap;
+    }
+
+    .features-content div {
+        width: calc(50% - (1.5rem / 2));
+        text-align: left;
+        margin: 0;
+    }
+
+    .residential-section div,
+    .residential-section img,
+    .commercial-section div,
+    .commercial-section img {
+        width: 100%;
+    }
+
+    .commercial-section img {
+        order: -1;
+    }
+
+    .subscribe-container  {
+        padding: 4rem 9.5rem;
+    }
+
+    footer figure {
+        padding: 0;
+        margin: 0 9rem 0 0;
+    }
+
+    .footer-links-container {
+        margin: 0 0 4rem 0;
+    }
+
+    footer p {
+        padding: 0 9.5rem;
+    }
+
+    .gallery-about figure {
+        order: 1;
+        width: 100%;
+        margin: 0;
+    }
+
+    .gallery-about .text-container {
+        margin-top: unset;
+    }
+
+    .gallery-about div:first-of-type img {
+        margin: unset;
+        width: 100%;
+    }
+
+    .text-container {
+        width: 100%;
+    }
+
+    .gallery-about > div:nth-of-type(2) {
+         margin-top: 3rem;
+    }
+
+    .cultural-section h2, .highlights h2 {
+        text-align: center;
+    }
+
+    .highlights div.medium-flex {
+        margin-top: 3rem;
+    }
+
+    .highlights div.medium-flex > img {
+        margin: 0;
+        width: 100%;
+        flex: 1 1 50%;
+    }
+
+    .highlights .text-container {
+        flex: 1 1 50%;
+    }
+
+    .highlights li:first-of-type {
+        padding-top: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .large-flex {
+        display: flex;
+        column-gap: 1.5rem;
+    }
+    .features-content div {
+        width: calc((100% / 3) - (3rem / 3));
+    }
+
+    .residential-section.medium-flex, .commercial-section.medium-flex {
+        flex-direction: column;
+    }
+    .residential-section,
+    .commercial-section {
+        width: 100%;
+    }
+
+    .commercial-section img {
+        order: 0;
+    }
+
+    .gallery-about .text-container {
+        margin-top: 3rem;
+    }
+
+    .highlights div.medium-flex > img {
+        margin: 0;
+        width: 100%;
+        flex: 1 1 30%;
+    }
+
+    .highlights .text-container {
+        flex: 1 1 70%;
+    }
 }
